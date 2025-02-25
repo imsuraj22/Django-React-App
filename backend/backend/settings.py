@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-^txk43isz&&jf&65cz#vov!e1a_eyj79^c=+(@n8^u!gz)-7jx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["django-react-app.herokuapp.com', 'localhost'"]
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
@@ -70,7 +70,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-     "corsheaders.middleware.CorsMiddleware",
+     "corsheaders.middleware.CorsMiddleware", 
+      'whitenoise.middleware.WhiteNoiseMiddleware', 
+    'corsheaders.middleware.CorsMiddleware', 
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://your-react-app.vercel.app",  # Replace with your Vercel app URL
+    "http://localhost:8000",              # For local development
 ]
 
 ROOT_URLCONF = 'backend.urls'
