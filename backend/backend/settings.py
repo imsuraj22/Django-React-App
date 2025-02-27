@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^txk43isz&&jf&65cz#vov!e1a_eyj79^c=+(@n8^u!gz)-7jx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["django-react-app.herokuapp.com', 'localhost'"]
+ALLOWED_HOSTS = ["django-react-app.onrender.com', 'localhost'"]
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
